@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    background: #fafafa;
+}
+
+/* Layout */
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 240px;
+    background: white;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+}
+
+.sidebar h2 {
+    margin-bottom: 25px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 12px 0;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.sidebar li:hover {
+    color: #0095f6;
+}
+
+/* Main */
+.main {
+    margin-left: 240px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Stories */
+.stories {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    background: white;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+}
+
+.story {
+    flex: 0 0 auto;
+    text-align: center;
+    font-size: 12px;
+}
+
+.story img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    padding: 2px;
+    background: linear-gradient(45deg, #feda75, #d62976, #962fbf);
+}
+
+/* Posts */
+.posts {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+/* Post Card */
+.post {
+    background: white;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Header */
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.post-header img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+/* Image */
+.post-img {
+    width: 100%;
+    display: block;
+}
+
+/* Actions */
+.post-actions {
+    padding: 10px;
+    font-size: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+/* Caption */
+.post-caption {
+    padding: 0 10px 10px;
+    font-size: 14px;
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    color: #888;
+}
+
+/* 🔥 RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+    .sidebar {
+        display: none;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .stories {
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+
+    .post {
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+}
